@@ -23,10 +23,10 @@ def end_game(card_total)
 end
 
 def initial_round
-  card_total = 0
-  card_total = deal_card + deal_card
+  sum = 0
+  sum = deal_card + deal_card
   display_card_total(sum)
-  return card_total
+  return sum
 end
 
 def hit?(card_total)
