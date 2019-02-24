@@ -23,10 +23,10 @@ def end_game(card_total)
 end
 
 def initial_round
-  sum = 0
-  sum = deal_card + deal_card
+  card_total = 0
+  card_total = deal_card + deal_card
   display_card_total(sum)
-  return sum
+  return card_total
 end
 
 def hit?(card_total)
@@ -51,5 +51,12 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  card_total = initial_round
+  display_card_total(card_total)
+  if card_total <= 21
+    hit
+    display_card_total
+  end
+  end_game
 end
